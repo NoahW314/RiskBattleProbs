@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id = "@+id/attacker_input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:text="@string/attacker_input" />
+
+    <EditText
+        android:id="@+id/attacker_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/attacker_input_text"
+        android:layout_alignBaseline="@id/attacker_input_text"
+        android:ems="2"
+        android:inputType="number"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id = "@+id/defender_input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/attacker_input_text"
+        android:layout_below="@id/attacker_input_text"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:text="@string/defender_input" />
+
+    <EditText
+        android:id="@+id/defender_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/defender_input_text"
+        android:layout_alignBaseline="@id/defender_input_text"
+        android:ems="2"
+        android:inputType="number"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/calculation_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/defender_input_text"
+        android:layout_alignStart="@id/defender_input_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        />
+
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/calculate"
+        app:backgroundTint="@color/colorPrimary"
+        android:onClick="onCalculateButtonClicked"
+        />
+
+</RelativeLayout>
